@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open-Source developer profile</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" type="text/css" href="./styles/icons.css" />
+
+<link rel="stylesheet" type="text/css" href="./themes/jq.ui.volcano.css"
+	title="volcano" />
+
+<script type="text/javascript" charset="utf-8"
+	src="./js/cordova-2.0.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jq.ui.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jq.template.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jq.carousel.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jq.drawer.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="./js/jq.alphatable.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/jq.fx.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="./js/index.js"></script>
+</head>
+
+<body>
+	<script type='text/html' id='contact_list_template'>
+      <li class="contact_entry" >
+        <a id="contact_<%= contact_id %>" 
+           href="javascript:window.loadProfile('<%= contact_id %>','<%= contact_firstname  %>','<%= contact_lastname  %>');"
+					class="button"><%= contact %></a> 
+      </li>
+	</script>
+
+	<script type='text/html' id='profile_list_template'>
+      <li class="contact_entry" ><%= contact_lastname  %>, <%= contact_firstname  %></li>
+	</script>
+	
+    <script type='text/html' id='profile_template' >
+	<h2>Neuer open-source Developer</h2>
+    Dieser Benutzer ist jetzt als OS-Developer eingetragen.
+	<br />
+	<br /> 
+	<table style="width: 100%">
+	    <tr>
+			<td>ID:</td>
+			<td><%= contact_id %></td>
+		</tr>
+	    <tr>
+			<td>Nachname:</td>
+			<td><%= contact_lastname %></td>
+		</tr>
+		<tr>
+			<td>Vorname:</label></td>
+			<td><%= contact_firstname %></td>
+		</tr>
+	</table>
+
+	<a href="javascript:window.closeThisModalAndGoToProfiles()"
+		class="button">Liste aller OS-Developer</a>
+    </script>
+
+	<div id="jQUi" >
+		<div id="header">
+		</div>
+<!-- 
+		<div title='Welcome' selected="true" id="hello_world" class="panel"  
+		         scrolling="yes" >
+		    <h2>loading data ...</h2>     
+		</div>
+ -->
+ 
+		<div id="content">
+		    <div title='Contacts' id="contacts" selected="true" class="panel"  
+		         scrolling="yes" >
+		         
+				<h2>Liste meiner Kontakte:</h2>
+				<br />
+                <i>wähle die open-source Developer aus der
+					Liste deiner Kontakte aus.</i> 
+			    <br /> 
+			    <br />
+			    Anzahl der gefundenen Kontakte: <b><span id="contacts_length">?</span></b> <br />
+			    übersprungene Kontakte (<span id="contacts_skiped_length">?</span>)
+			    <br />
+			    <ul id="contacts_list">
+			    
+			    </ul>
+		    </div>
+		    
+			<div title='Profiles'  id="profiles" class="panel"  >
+			    <h2>Liste der open-source Developer:</h2>
+			    <br />
+			    <br />
+			    <ul id="profiles_list" >
+			    </ul>
+			</div>
+
+            <!-- modal="true"  -->
+			<div title='Profile' id="myprofile" class="panel"  >
+			</div>
+		</div>
+
+		<div id="navbar">
+			<a href="#contacts" id='navbar_home' class='icon home'>contacts</a>
+			<a href="#profiles" id='navbar_home' class='icon home'>profiles</a>
+		</div>
+
+		<!-- this is the default left side nav menu 
+		<nav>
+			<div class='title'>Home</div>
+			<ul>
+				<li class="icon home mini"><a href="#main">Selectors</a></li>
+			</ul>
+		</nav>
+		-->
+	</div>
+
+
+</body>
+</html>

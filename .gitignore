@@ -1,0 +1,4 @@
+*.log
+.metadata/
+bin/
+*.class
