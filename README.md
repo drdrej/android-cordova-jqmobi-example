@@ -11,10 +11,13 @@ Used technologies:
 ------------------
 -- Android OS 
 -- Apache Cordova (aka PhoneGap)
--- jqMobi (a faster and smaller alternative to jquery mobile
+-- jqMobi (a faster and smaller alternative to jquery mobile)
 
 Warning
 ------------------
 This example is not a full-working app. It's unstavle and is only an example for tasks like:
 -- build a basic android app based on Apache Cordova
 -- connect to contacts and show them
+
+
+thank you for your attention!
